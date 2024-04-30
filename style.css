@@ -65,4 +65,20 @@ nav .circle {
     border-radius: 50%;
     border: 8px solid #fff;
     box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+} 
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls div{
+    margin: 20px;
+    background:#ff4d4d;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ff4d4d;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
 }
