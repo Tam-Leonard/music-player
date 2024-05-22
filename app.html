@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ba1a915c63.js" crossorigin="anonymous"></script>
+
     <title>Music Player</title>
 </head>
 <body>
@@ -30,9 +32,9 @@
             <input type="range" value="0" id="progress">
 
             <div class="controls">
-                <div><img width="20" height="20" src="https://img.icons8.com/external-line-adri-ansyah/64/external-music-music-player-button-line-adri-ansyah-33.png" alt="external-music-music-player-button-line-adri-ansyah-33"/></div>
-                <div id="ctrlIcon"><img width="20" height="20" src="https://img.icons8.com/external-line-adri-ansyah/64/external-music-music-player-button-line-adri-ansyah-39.png" alt="external-music-music-player-button-line-adri-ansyah-39"/></div>
-                <div><img width="20" height="20" src="https://img.icons8.com/external-line-adri-ansyah/64/external-music-music-player-button-line-adri-ansyah-15.png" alt="external-music-music-player-button-line-adri-ansyah-15"/></div>
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
             </div>
         </div>
     </div>
@@ -47,6 +49,18 @@
             progress.value = song.currentTime;
         }
 
+        function playPause(){
+            if (cntrlIcon.classList.contains("fa-pause")){
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                cntrlIcon.classList.add("fa-play");
+            } else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                cntrlIcon.classList.remove("fa-play");
+            }
+        }
+         
     </script>
 </body>
 </html>
